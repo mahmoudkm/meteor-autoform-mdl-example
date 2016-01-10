@@ -8,7 +8,33 @@ this.AFormMDLTestGlobalObj.itemsSch = new SimpleSchema({
   },
   ItemName: {
     type: String,
-    label: "Item Name"
+    label: "Item Name",
+    optional: true,
+    // placeholder: "Testing..."
+
+  },
+  ItemDeliverToHome: {
+    type: String,
+    label: "Deliver to home?",
+    optional: false,
+    autoform: {
+      type: "select-radio",
+      options: function () {
+        return [
+          {label: "Yes", value: 'Yes'},
+          {label: "No", value: 'No'}
+        ];
+      }
+    }
+  },
+  memoField: {
+    type: String,
+    label: "Memo Field",
+    optional: false,
+    max: 1000,
+    autoform: {
+      rows: 8
+    }
   }
 
 });

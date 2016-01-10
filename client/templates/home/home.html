@@ -12,26 +12,15 @@
 
   {{#autoForm id="insertItemsForm" type="normal" schema=AdminSchemas.itemsSch}}
 
-      {{> afQuickField name='ItemCode'}}      
-      {{> afQuickField name='ItemName'}}
+      {{> afQuickField name='ItemCode' placeholder="Item Code"}}      
+      {{> afQuickField name='ItemName' placeholder="Item Name"}}
+      {{> afQuickField name='ItemDeliverToHome'}}
+      {{> afQuickField name='memoField'}}
       
       <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Save</button>
   {{/autoForm}}
 
-<br><br><br><br>
-
-<!-- Raised button with ripple -->
-<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
-  Button
-</button>
-
-
-
-<!-- FAB button with ripple -->
-<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect">
-  <i class="material-icons">add</i>
-</button>
-
-
+      <br><br><br><br>
+  
   </div>
 </template>
